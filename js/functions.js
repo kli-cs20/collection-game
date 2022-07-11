@@ -62,16 +62,22 @@ function drawBlock(block) {
     rect(block.x, block.y, block.w, block.h, "fill");
 }
 
+
+
 function showScore() {
     stroke("white");
     font("15px Arial");
     text(`Score: ${score}`, 10, 20, "stroke");
+    if (score === scoreThreshold) {
+        score += 10;
+    }
 }
 
 function newMap() {
     player.x = 300;
     player.y = 200;
     blocks = [];
+    scoreThreshold = score + 25;
     color = randomRGB();
     blocks = initBlocks(25);
 }

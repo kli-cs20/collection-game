@@ -2,6 +2,10 @@
 let cnv = document.getElementById("canvas");
 let ctx = cnv.getContext("2d");
 
+// Score Variables
+let score = 0;
+let scoreThreshold = 50;
+
 // Set Canvas Size
 cnv.width = 600;
 cnv.height = 400;
@@ -18,8 +22,6 @@ let player = {
 // Blocks
 let color = "green";
 let blocks = initBlocks(50);
-
-let score = 0;
 
 // Main Draw Loop
 window.addEventListener("load", draw);
