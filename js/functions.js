@@ -65,15 +65,21 @@ function drawBlock(block) {
 
 
 function showScore() {
-    stroke("white");
+    fill("white");
     font("15px Arial");
-    text(`Score: ${score}`, 10, 20, "stroke");
+    text(`Score: ${score}`, 10, 20, "fill");
+    text(`Areas Found: ${areasFound}`, 10, 35, "fill");
+    text(`Areas Cleared: ${areasCleared}`, 10, 50, "fill");
+
     if (score === scoreThreshold) {
         score += 10;
+        areasCleared++;
+        // +10 points for clearing all blocks in an area
     }
 }
 
 function newMap() {
+    areasFound++;
     player.x = 300;
     player.y = 200;
     blocks = [];
