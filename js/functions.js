@@ -85,7 +85,7 @@ function newMap() {
     player.y = 200;
     blocks = [];
     color = randomRGB();
-    blocks = initBlocks(25);
+    blocks = initBlocks(randomInt(15, 51));
 }
   
 
