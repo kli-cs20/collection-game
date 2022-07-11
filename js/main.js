@@ -4,7 +4,8 @@ let ctx = cnv.getContext("2d");
 
 // Set Canvas Size
 cnv.width = 600;
-cnv.height = 400
+cnv.height = 400;
+
 
 // Player Object
 let player = {
@@ -100,3 +101,4 @@ function eatBlocks() {
     }
   }
 }
+
