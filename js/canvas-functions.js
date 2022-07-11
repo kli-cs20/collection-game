@@ -75,18 +75,6 @@ function text(message, x, y, mode) {
     }
 }
 
-function ellipse(x, y, xRadius, yRadius, rotation, startAngle, endAngle, mode) {
-    if (mode === "fill") {
-        ctx.beginPath();
-        ctx.ellipse(x, y, xRadius, yRadius, rotation, startAngle, endAngle);
-        ctx.fill();
-    } else if (mode === "stroke") {
-        ctx.beginPath();
-        ctx.ellipse(x, y, xRadius, yRadius, rotation, startAngle, endAngle);
-        ctx.stroke();
-    }
-}
-
 function image(img, x, y, w, h) {
     ctx.drawImage(img, x, y, w, h);
 }

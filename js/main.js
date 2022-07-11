@@ -8,7 +8,6 @@ cnv.height = 400;
 
 // Global Variables
 let score = 0;
-let scoreThreshold = 50;
 let areasFound = 1;
 let areasCleared = 0;
 

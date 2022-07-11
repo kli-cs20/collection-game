@@ -71,9 +71,10 @@ function showScore() {
     text(`Areas Found: ${areasFound}`, 10, 35, "fill");
     text(`Areas Cleared: ${areasCleared}`, 10, 50, "fill");
 
-    if (score === scoreThreshold) {
+    if (blocks.length === 0) {
         score += 10;
         areasCleared++;
+        newMap();
         // +10 points for clearing all blocks in an area
     }
 }
@@ -83,7 +84,6 @@ function newMap() {
     player.x = 300;
     player.y = 200;
     blocks = [];
-    scoreThreshold = score + 25;
     color = randomRGB();
     blocks = initBlocks(25);
 }
